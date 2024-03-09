@@ -1,6 +1,6 @@
 import csv, time
 
-with open('normal_bitwarden.csv') as csv_file:
+with open('BITWARDEN_VAULT.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     delay = 1.2
@@ -12,10 +12,12 @@ with open('normal_bitwarden.csv') as csv_file:
         password = row[9].strip()
         url = row[7].strip()
         name = row[3].strip()
-        key = f"{username}\t{password}"
+        key = f"{username}{password}"
         if not data.get(key):
             data[key] = {"URL": url, "Name": name}
+        line_count += 1
         #data.add(u)#((username, password, url, name))
-        #time.sleep(delay)
+        print(f"User: {username} | Pass: {password} | Url: {url} | Name: {name}")
+        time.sleep(delay)
     # Processed 997 lines.
-    print(f'\n\n\n\n\nProcessed {len(data)} lines.\n\n\n\n\n\n')
+    print(f'\n\nProcessed {len(data)} lines.\n\n')

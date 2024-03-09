@@ -1,0 +1,7 @@
+Obs-1 : After the clean up load the CSV file into a popular brower (Chrome or Firefox), one with no passwords save,
+after that download all passwords as CSV file (use the password manager of the browser).
+
+Obs-2 : Recommend using a password manager such as Bitwarden to manage all passwords accross as devices, the first observation
+was a way to make the Import of the clean CSV file usable since doing it manually or with Pandas the format isn't fully
+supported by most passwords manages (tested with Bitwarden), that's why the CSV file must be imported and then downloaded 
+afterwards to ensure proper comability due to property syntax used by popular browsers

@@ -1,4 +1,5 @@
 *.key
 *.venv
 *.cfg
+*.csv
 normal_bitwarden.csv
